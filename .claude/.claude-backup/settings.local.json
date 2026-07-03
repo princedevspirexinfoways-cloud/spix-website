@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(mv .claude /tmp/claude-1000/-home-princesherasiya-Documents-spix-website/d6829ad6-3e00-484c-968b-cd70b7b85297/scratchpad/.claude-backup)",
+      "Bash(npx -y create-next-app@latest . --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes --no-turbopack)"
+    ]
+  }
+}
