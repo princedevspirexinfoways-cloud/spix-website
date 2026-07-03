@@ -133,7 +133,7 @@ export default function Loader() {
         <div className="absolute left-1/2 top-1/2 h-[40vmax] w-[40vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue/15 blur-[120px]" />
       </div>
 
-      <div data-loader-fade ref={logoRef} className="perspective-1200 flex overflow-hidden font-display text-5xl font-bold tracking-tight text-white md:text-7xl">
+      <div data-loader-fade ref={logoRef} className="perspective-1200 flex overflow-hidden font-display text-5xl font-normal tracking-tight text-white md:text-7xl">
         {"SPIREX".split("").map((c, i) => (
           <span key={i} className={`inline-block ${i >= 3 ? "text-gradient-blue" : ""}`}>
             {c}
@@ -141,7 +141,7 @@ export default function Loader() {
         ))}
       </div>
 
-      <div data-loader-fade className="mt-4 h-6 overflow-hidden text-xs font-medium uppercase tracking-[0.5em] text-blue-soft/70">
+      <div data-loader-fade className="mt-4 h-6 overflow-hidden text-xs font-normal uppercase tracking-[0.5em] text-blue-soft/70">
         <span ref={wordRef} className="inline-block">
           INNOVATE
         </span>
@@ -156,7 +156,7 @@ export default function Loader() {
       <span
         data-loader-fade
         ref={counterRef}
-        className="absolute bottom-8 right-8 font-display text-6xl font-bold tabular-nums text-white/15 md:text-8xl"
+        className="absolute bottom-8 right-8 font-display text-6xl font-normal tabular-nums text-white/15 md:text-8xl"
       >
         000
       </span>

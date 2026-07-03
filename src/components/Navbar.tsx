@@ -40,9 +40,9 @@ export default function Navbar() {
   return (
     <header ref={ref} className="fixed inset-x-0 top-0 z-[80]">
       <nav className="mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-2xl px-5 py-3 glass mx-4 lg:mx-auto">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight text-white" data-cursor="link">
+        <a href="#top" className="font-display text-lg font-normal tracking-tight text-white" data-cursor="link">
           SPI<span className="text-gradient-blue">REX</span>
-          <span className="ml-1.5 hidden text-[10px] font-medium uppercase tracking-[0.3em] text-ice/40 sm:inline">
+          <span className="ml-1.5 hidden text-[10px] font-normal uppercase tracking-[0.3em] text-ice/40 sm:inline">
             Infoways
           </span>
         </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
               <a
                 href={l.href}
                 data-cursor="link"
-                className="group relative text-sm font-medium text-ice/70 transition-colors hover:text-white"
+                className="group relative text-sm font-normal text-ice/70 transition-colors hover:text-white"
               >
                 {l.label}
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-blue to-blue-soft transition-all duration-300 group-hover:w-full" />
@@ -92,7 +92,7 @@ export default function Navbar() {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-4 py-3 text-sm font-medium text-ice/80 hover:bg-white/5 hover:text-white"
+                className="block rounded-lg px-4 py-3 text-sm font-normal text-ice/80 hover:bg-white/5 hover:text-white"
               >
                 {l.label}
               </a>

@@ -40,7 +40,7 @@ export default function MagneticButton({
   };
 
   const styles = cn(
-    "group relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold tracking-wide transition-shadow duration-500 will-change-transform",
+    "group relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-normal tracking-wide transition-shadow duration-500 will-change-transform",
     variant === "primary"
       ? "bg-blue text-white glow-blue hover:shadow-[0_0_40px_rgba(21,101,255,0.6),0_0_120px_rgba(21,101,255,0.25)]"
       : "glass text-ice hover:border-blue-soft/40",

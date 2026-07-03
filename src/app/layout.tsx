@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Cursor from "@/components/Cursor";
 import Loader from "@/components/Loader";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -50,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="lenis">
-      <body className={`${inter.variable} ${grotesk.variable} noise antialiased`}>
+      <body className={`${grotesk.variable} noise antialiased`}>
         <Loader />
         <SmoothScroll />
         <Cursor />

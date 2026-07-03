@@ -110,7 +110,7 @@ export default function Cursor() {
       >
         <span
           ref={labelRef}
-          className="text-[11px] font-semibold uppercase tracking-widest text-white opacity-0"
+          className="text-[11px] font-normal uppercase tracking-widest text-white opacity-0"
         />
       </div>
     </>

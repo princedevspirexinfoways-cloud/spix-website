@@ -41,7 +41,7 @@ export default function CTA() {
         <RevealText
           as="h2"
           split="words"
-          className="font-display text-[clamp(2.4rem,7vw,5.5rem)] font-bold leading-[1.05] tracking-tight text-white"
+          className="font-display text-[clamp(2.4rem,7vw,5.5rem)] font-normal leading-[1.05] tracking-tight text-white"
         >
           Let&apos;s Build Something <span className="text-gradient">Extraordinary</span> Together
         </RevealText>

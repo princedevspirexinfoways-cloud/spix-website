@@ -118,7 +118,7 @@ export default function About() {
                 <span className="mb-6 inline-flex size-12 items-center justify-center rounded-2xl bg-blue/15 text-xl text-blue-soft shadow-[inset_0_0_20px_rgba(21,101,255,0.25)]">
                   {p.icon}
                 </span>
-                <h3 className="font-display text-xl font-semibold text-white">{p.title}</h3>
+                <h3 className="font-display text-xl font-normal text-white">{p.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ice/60">{p.body}</p>
               </article>
             </TiltCard>
@@ -132,7 +132,7 @@ export default function About() {
               <CountUp
                 value={s.value}
                 suffix={s.suffix}
-                className="font-display text-4xl font-bold text-gradient md:text-6xl"
+                className="font-display text-4xl font-normal text-gradient md:text-6xl"
               />
               <p className="mt-2 text-xs uppercase tracking-[0.25em] text-ice/50">{s.label}</p>
             </div>
@@ -144,7 +144,7 @@ export default function About() {
           <RevealText
             as="h3"
             split="words"
-            className="mb-16 text-center font-display text-3xl font-bold text-white md:text-4xl"
+            className="mb-16 text-center font-display text-3xl font-normal text-white md:text-4xl"
           >
             The journey so far
           </RevealText>
@@ -171,7 +171,7 @@ export default function About() {
                     }`}
                   />
                   <div>
-                    <span className="font-display text-sm font-bold tracking-widest text-blue-soft">{t.year}</span>
+                    <span className="font-display text-sm font-normal tracking-widest text-blue-soft">{t.year}</span>
                     <p className="mt-1 text-sm leading-relaxed text-ice/65">{t.text}</p>
                   </div>
                 </li>

@@ -15,14 +15,14 @@ export default function SectionHeading({ eyebrow, title, description, align = "c
       <RevealText
         as="p"
         split="chars"
-        className="mb-4 text-xs font-semibold uppercase tracking-[0.4em] text-blue-soft"
+        className="mb-4 text-xs font-normal uppercase tracking-[0.4em] text-blue-soft"
       >
         {eyebrow}
       </RevealText>
       <RevealText
         as="h2"
         split="words"
-        className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-6xl"
+        className="font-display text-4xl font-normal leading-[1.08] tracking-tight text-white md:text-6xl"
       >
         {title}
       </RevealText>

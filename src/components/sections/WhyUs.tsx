@@ -82,7 +82,7 @@ export default function WhyUs() {
           <span
             key={b}
             data-badge
-            className="glass absolute rounded-full px-4 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-blue-soft/70"
+            className="glass absolute rounded-full px-4 py-2 text-[10px] font-normal uppercase tracking-[0.25em] text-blue-soft/70"
             style={{ left: `${8 + i * 24}%`, top: i % 2 ? "12%" : "78%" }}
           >
             {b}
@@ -105,14 +105,14 @@ export default function WhyUs() {
                 className="glass group flex h-full flex-col justify-between rounded-3xl p-8 transition-colors duration-500 hover:border-blue-soft/30"
               >
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-white">{f.title}</h3>
+                  <h3 className="font-display text-lg font-normal text-white">{f.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-ice/55">{f.text}</p>
                 </div>
                 <div className="mt-8 flex items-end justify-between border-t border-white/8 pt-5">
                   <CountUp
                     value={f.stat.value}
                     suffix={f.stat.suffix}
-                    className="font-display text-3xl font-bold text-gradient-blue"
+                    className="font-display text-3xl font-normal text-gradient-blue"
                   />
                   <span className="text-[10px] uppercase tracking-[0.25em] text-ice/40">{f.statLabel}</span>
                 </div>

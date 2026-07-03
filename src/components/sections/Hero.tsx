@@ -88,12 +88,12 @@ export default function Hero() {
         style={{ visibility: "hidden" }}
         className="relative z-10 mx-auto max-w-5xl px-6 text-center"
       >
-        <p data-hero-meta className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.35em] text-blue-soft glass">
+        <p data-hero-meta className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-normal uppercase tracking-[0.35em] text-blue-soft glass">
           <span className="size-1.5 animate-pulse rounded-full bg-blue-soft shadow-[0_0_8px_#4d8dff]" />
           Software · Design · Innovation
         </p>
 
-        <h1 className="split-parent perspective-1200 font-display text-[clamp(2.6rem,8vw,6.5rem)] font-bold leading-[1.02] tracking-tight text-white">
+        <h1 className="split-parent perspective-1200 font-display text-[clamp(2.6rem,8vw,6.5rem)] font-normal leading-[1.02] tracking-tight text-white">
           Transforming <span className="text-gradient">Ideas</span> Into{" "}
           <span className="text-gradient-blue">Digital Reality</span>
         </h1>

@@ -75,9 +75,9 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* brand + newsletter */}
           <div className="lg:col-span-2 lg:pr-12">
-            <a href="#top" className="font-display text-2xl font-bold text-white" data-cursor="link">
+            <a href="#top" className="font-display text-2xl font-normal text-white" data-cursor="link">
               SPI<span className="text-gradient-blue">REX</span>
-              <span className="ml-2 text-[10px] font-medium uppercase tracking-[0.3em] text-ice/40">Infoways</span>
+              <span className="ml-2 text-[10px] font-normal uppercase tracking-[0.3em] text-ice/40">Infoways</span>
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-ice/50">
               A software development company crafting premium digital experiences, scalable platforms,
@@ -85,7 +85,7 @@ export default function Footer() {
             </p>
 
             <form onSubmit={onSubscribe} className="mt-8 max-w-sm">
-              <label htmlFor="newsletter" className="text-xs font-semibold uppercase tracking-[0.25em] text-ice/60">
+              <label htmlFor="newsletter" className="text-xs font-normal uppercase tracking-[0.25em] text-ice/60">
                 Get engineering insights
               </label>
               <div className="glass mt-3 flex overflow-hidden rounded-full p-1.5 focus-within:border-blue-soft/50">
@@ -98,7 +98,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="shrink-0 rounded-full bg-blue px-5 py-2.5 text-xs font-semibold text-white transition-shadow hover:glow-blue"
+                  className="shrink-0 rounded-full bg-blue px-5 py-2.5 text-xs font-normal text-white transition-shadow hover:glow-blue"
                 >
                   {subscribed ? "Subscribed ✓" : "Subscribe"}
                 </button>
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Quick links">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-ice/60">Quick Links</h3>
+            <h3 className="text-xs font-normal uppercase tracking-[0.25em] text-ice/60">Quick Links</h3>
             <ul className="mt-5 space-y-3">
               {QUICK_LINKS.map((l) => (
                 <li key={l.href}>
@@ -121,7 +121,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-ice/60">Services</h3>
+            <h3 className="text-xs font-normal uppercase tracking-[0.25em] text-ice/60">Services</h3>
             <ul className="mt-5 space-y-3">
               {SERVICE_LINKS.map((s) => (
                 <li key={s}>
@@ -132,7 +132,7 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h3 className="mt-8 text-xs font-semibold uppercase tracking-[0.25em] text-ice/60">Contact</h3>
+            <h3 className="mt-8 text-xs font-normal uppercase tracking-[0.25em] text-ice/60">Contact</h3>
             <a href="mailto:hello@spirexinfoways.com" className="mt-3 block text-sm text-blue-soft hover:text-white">
               hello@spirexinfoways.com
             </a>

@@ -103,7 +103,7 @@ export default function TechStack() {
               onMouseEnter={() => setActive(c)}
               onClick={() => setActive(c)}
               className={cn(
-                "rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-widest transition-all duration-300",
+                "rounded-full px-4 py-2 text-xs font-normal uppercase tracking-widest transition-all duration-300",
                 active === c
                   ? "bg-blue text-white glow-blue"
                   : "glass text-ice/60 hover:text-white hover:border-blue-soft/30"
@@ -123,7 +123,7 @@ export default function TechStack() {
             {/* glowing core */}
             <div data-orbit-core className="absolute z-10 flex flex-col items-center justify-center">
               <div className="flex size-24 items-center justify-center rounded-full bg-gradient-to-br from-blue to-navy shadow-[0_0_60px_rgba(21,101,255,0.55),inset_0_0_30px_rgba(255,255,255,0.15)] md:size-28">
-                <span className="font-display text-sm font-bold tracking-widest text-white">SPIREX</span>
+                <span className="font-display text-sm font-normal tracking-widest text-white">SPIREX</span>
               </div>
             </div>
 
@@ -154,7 +154,7 @@ export default function TechStack() {
                         <span className="block -translate-x-1/2 -translate-y-1/2">
                           <span
                             className={cn(
-                              "block whitespace-nowrap rounded-full px-3.5 py-1.5 text-[11px] font-semibold transition-all duration-500 md:text-xs",
+                              "block whitespace-nowrap rounded-full px-3.5 py-1.5 text-[11px] font-normal transition-all duration-500 md:text-xs",
                               dim
                                 ? "glass scale-90 text-ice/25 blur-[1px]"
                                 : "glass-strong text-white shadow-[0_0_20px_rgba(21,101,255,0.3)]"

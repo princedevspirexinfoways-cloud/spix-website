@@ -77,14 +77,14 @@ export default function Process() {
                 <span
                   data-step-dot
                   aria-hidden
-                  className="relative z-10 mt-1 flex size-[46px] shrink-0 items-center justify-center rounded-full glass-strong text-xs font-bold text-blue-soft shadow-[0_0_24px_rgba(21,101,255,0.35)]"
+                  className="relative z-10 mt-1 flex size-[46px] shrink-0 items-center justify-center rounded-full glass-strong text-xs font-normal text-blue-soft shadow-[0_0_24px_rgba(21,101,255,0.35)]"
                 >
                   {s.n}
                 </span>
                 <div className="flex flex-1 flex-col gap-6 md:flex-row md:items-baseline md:gap-12">
                   <span
                     data-step-num
-                    className="font-display text-3xl font-bold tracking-tight text-white md:w-56 md:shrink-0 md:text-4xl"
+                    className="font-display text-3xl font-normal tracking-tight text-white md:w-56 md:shrink-0 md:text-4xl"
                   >
                     {s.title}
                   </span>

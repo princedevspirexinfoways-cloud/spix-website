@@ -88,7 +88,7 @@ export default function Portfolio() {
                   data-cursor="link"
                   onClick={() => setFilter(f)}
                   className={cn(
-                    "rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-widest transition-all duration-300",
+                    "rounded-full px-4 py-2 text-xs font-normal uppercase tracking-widest transition-all duration-300",
                     filter === f ? "bg-blue text-white glow-blue" : "glass text-ice/60 hover:text-white"
                   )}
                 >
@@ -130,11 +130,11 @@ export default function Portfolio() {
                   {/* hover reveal info */}
                   <div className="absolute inset-x-0 bottom-0 translate-y-4 p-7 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                     <div className="glass rounded-2xl p-5">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-soft">{p.category}</p>
-                      <h3 className="mt-1.5 font-display text-xl font-semibold text-white">{p.title}</h3>
+                      <p className="text-[10px] font-normal uppercase tracking-[0.3em] text-blue-soft">{p.category}</p>
+                      <h3 className="mt-1.5 font-display text-xl font-normal text-white">{p.title}</h3>
                       <div className="mt-3 flex max-h-0 gap-2 overflow-hidden opacity-0 transition-all duration-500 group-hover:max-h-10 group-hover:opacity-100">
                         {p.tags.map((t) => (
-                          <span key={t} className="rounded-full bg-white/8 px-3 py-1 text-[10px] font-medium text-ice/70">
+                          <span key={t} className="rounded-full bg-white/8 px-3 py-1 text-[10px] font-normal text-ice/70">
                             {t}
                           </span>
                         ))}
@@ -142,7 +142,7 @@ export default function Portfolio() {
                     </div>
                   </div>
 
-                  <span className="absolute left-6 top-6 rounded-full glass px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-ice/60">
+                  <span className="absolute left-6 top-6 rounded-full glass px-3 py-1 text-[10px] font-normal uppercase tracking-widest text-ice/60">
                     Coming soon
                   </span>
                 </article>
@@ -158,7 +158,7 @@ export default function Portfolio() {
               <span className="flex size-16 items-center justify-center rounded-full bg-blue text-2xl text-white glow-blue transition-transform duration-500 group-hover:rotate-45">
                 ↗
               </span>
-              <p className="font-display text-xl font-semibold text-white">Your project here</p>
+              <p className="font-display text-xl font-normal text-white">Your project here</p>
               <p className="text-sm text-ice/50">Let&apos;s make it the next case study</p>
             </a>
           </div>

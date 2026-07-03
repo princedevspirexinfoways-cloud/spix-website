@@ -24,11 +24,11 @@ function Card({ q }: { q: Quote }) {
       <span aria-hidden className="absolute -left-1 -top-3 font-display text-6xl text-blue/40">&ldquo;</span>
       <blockquote className="relative text-sm leading-relaxed text-ice/75">{q.text}</blockquote>
       <figcaption className="mt-6 flex items-center gap-3">
-        <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-blue to-navy text-xs font-bold text-white">
+        <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-blue to-navy text-xs font-normal text-white">
           {q.name.split(" ").map((n) => n[0]).join("")}
         </span>
         <span>
-          <span className="block text-sm font-semibold text-white">{q.name}</span>
+          <span className="block text-sm font-normal text-white">{q.name}</span>
           <span className="block text-xs text-ice/45">{q.role}</span>
         </span>
       </figcaption>

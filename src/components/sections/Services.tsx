@@ -144,10 +144,10 @@ export default function Services() {
                 <span className="relative mb-6 inline-flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue/25 to-blue/5 text-blue-soft transition-transform duration-500 group-hover:scale-110 group-hover:text-white group-hover:shadow-[0_0_30px_rgba(21,101,255,0.5)]">
                   {s.icon}
                 </span>
-                <h3 className="relative font-display text-lg font-semibold text-white">{s.title}</h3>
+                <h3 className="relative font-display text-lg font-normal text-white">{s.title}</h3>
                 <p className="relative mt-3 text-sm leading-relaxed text-ice/55">{s.blurb}</p>
 
-                <span className="relative mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-soft opacity-0 transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-100">
+                <span className="relative mt-6 inline-flex items-center gap-2 text-xs font-normal uppercase tracking-widest text-blue-soft opacity-0 transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-100">
                   Explore
                   <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden>
                     <path d="M2 7h10m0 0L8 3m4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -193,7 +193,7 @@ export default function Services() {
               <span className="relative mb-6 inline-flex size-14 items-center justify-center rounded-2xl bg-blue/20 text-blue-soft">
                 {open.icon}
               </span>
-              <h3 className="relative font-display text-2xl font-bold text-white md:text-3xl">{open.title}</h3>
+              <h3 className="relative font-display text-2xl font-normal text-white md:text-3xl">{open.title}</h3>
               <p className="relative mt-4 leading-relaxed text-ice/65">{open.detail}</p>
 
               <ul className="relative mt-6 grid gap-3 sm:grid-cols-2">
@@ -214,7 +214,7 @@ export default function Services() {
               <a
                 href="#contact"
                 onClick={() => setOpenIdx(null)}
-                className="relative mt-8 inline-flex items-center gap-2 rounded-full bg-blue px-6 py-3 text-sm font-semibold text-white glow-blue transition-shadow hover:shadow-[0_0_40px_rgba(21,101,255,0.6)]"
+                className="relative mt-8 inline-flex items-center gap-2 rounded-full bg-blue px-6 py-3 text-sm font-normal text-white glow-blue transition-shadow hover:shadow-[0_0_40px_rgba(21,101,255,0.6)]"
               >
                 Discuss this service
               </a>
