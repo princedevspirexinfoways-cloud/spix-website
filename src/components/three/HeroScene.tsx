@@ -6,8 +6,34 @@ import { Float } from "@react-three/drei";
 import * as THREE from "three";
 import { prefersReducedMotion } from "@/lib/utils";
 
+declare global {
+  interface Window {
+    __spirexPointer?: THREE.Vector2;
+  }
+}
+
 const BLUE = new THREE.Color("#1565ff");
 const SOFT = new THREE.Color("#7aa8ff");
+
+/**
+ * The hero copy overlays the canvas and swallows its pointer events, so the
+ * scene tracks the pointer at the window level instead of via R3F state.
+ */
+const pointer = new THREE.Vector2();
+
+function usePointerTracking() {
+  useEffect(() => {
+    window.__spirexPointer = pointer;
+    const onMove = (e: PointerEvent) => {
+      pointer.set(
+        (e.clientX / window.innerWidth) * 2 - 1,
+        -(e.clientY / window.innerHeight) * 2 + 1
+      );
+    };
+    window.addEventListener("pointermove", onMove, { passive: true });
+    return () => window.removeEventListener("pointermove", onMove);
+  }, []);
+}
 
 /** Deterministic PRNG so geometry stays stable across re-renders. */
 function mulberry32(seed: number) {
@@ -43,11 +69,11 @@ function Particles({ count }: { count: number }) {
     return { positions, colors };
   }, [count]);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (!ref.current) return;
     ref.current.rotation.y += delta * 0.02;
     // particles drift away from the pointer
-    const p = state.pointer;
+    const p = pointer;
     ref.current.position.x = THREE.MathUtils.lerp(ref.current.position.x, -p.x * 0.6, 0.03);
     ref.current.position.y = THREE.MathUtils.lerp(ref.current.position.y, -p.y * 0.4, 0.03);
   });
@@ -76,10 +102,10 @@ function Globe() {
   const group = useRef<THREE.Group>(null);
   const inner = useRef<THREE.Mesh>(null);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (!group.current) return;
     group.current.rotation.y += delta * 0.08;
-    const p = state.pointer;
+    const p = pointer;
     group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, p.y * 0.25, 0.04);
     group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, -p.x * 0.15, 0.04);
     if (inner.current) inner.current.rotation.y -= delta * 0.15;
@@ -192,7 +218,7 @@ function GlassCubes() {
 
 function Rig() {
   useFrame((state) => {
-    const p = state.pointer;
+    const p = pointer;
     state.camera.position.x = THREE.MathUtils.lerp(state.camera.position.x, p.x * 0.7, 0.03);
     state.camera.position.y = THREE.MathUtils.lerp(state.camera.position.y, p.y * 0.45, 0.03);
     state.camera.lookAt(0, 0, 0);
@@ -201,6 +227,7 @@ function Rig() {
 }
 
 export default function HeroScene() {
+  usePointerTracking();
   const [active, setActive] = useState(true);
   // rendered client-only (dynamic ssr:false), so window is available at first render
   const [mobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
